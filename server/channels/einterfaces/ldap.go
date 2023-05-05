@@ -6,6 +6,8 @@ package einterfaces
 import (
 	"github.com/mattermost/mattermost-server/server/v8/channels/app/request"
 	"github.com/mattermost/mattermost-server/server/v8/model"
+
+	_ "github.com/mattermost/ldap"
 )
 
 type LdapInterface interface {
