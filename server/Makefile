@@ -355,9 +355,9 @@ ldap-mocks: ## Creates mock files for ldap.
 
 plugin-mocks: ## Creates mock files for plugins.
 	$(GO) install github.com/vektra/mockery/v2/...@v2.23.2
-	$(GOBIN)/mockery --dir ./public/plugin --name API --output ./plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
-	$(GOBIN)/mockery --dir ./public/plugin --name Hooks --output ./plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
-	$(GOBIN)/mockery --dir ./public/plugin --name Driver --output ./plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
+	$(GOBIN)/mockery --dir ./public/plugin --name API --output ./public/plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
+	$(GOBIN)/mockery --dir ./public/plugin --name Hooks --output ./public/plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
+	$(GOBIN)/mockery --dir ./public/plugin --name Driver --output ./public/plugin/plugintest --outpkg plugintest --case underscore --note 'Regenerate this file using `make plugin-mocks`.'
 
 einterfaces-mocks: ## Creates mock files for einterfaces.
 	$(GO) install github.com/vektra/mockery/v2/...@v2.23.2
